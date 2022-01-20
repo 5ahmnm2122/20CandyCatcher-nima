@@ -312,6 +312,7 @@ GameObject:
   - component: {fileID: 495750803}
   - component: {fileID: 495750805}
   - component: {fileID: 495750804}
+  - component: {fileID: 495750806}
   m_Layer: 5
   m_Name: GoodDrop
   m_TagString: Untagged
@@ -376,6 +377,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495750802}
   m_CullTransparentMesh: 1
+--- !u!114 &495750806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495750802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00ebfcca96e033478cd73a821cb8433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallSpeed: 300
 --- !u!1 &513315201
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +562,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083866278}
   m_CullTransparentMesh: 1
+--- !u!1 &1432748838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1432748840}
+  - component: {fileID: 1432748839}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1432748839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432748838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfbbcda69999a8342bb0a72bdde75c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goodItem: {fileID: 495750802}
+  badItem: {fileID: 1963914749}
+  spawnTime: 2
+  countdown: 0
+--- !u!4 &1432748840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432748838}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 447.64, y: 641, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1963914749
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,6 +620,7 @@ GameObject:
   - component: {fileID: 1963914750}
   - component: {fileID: 1963914752}
   - component: {fileID: 1963914751}
+  - component: {fileID: 1963914753}
   m_Layer: 5
   m_Name: BadDrop
   m_TagString: Untagged
@@ -623,6 +685,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1963914749}
   m_CullTransparentMesh: 1
+--- !u!114 &1963914753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963914749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00ebfcca96e033478cd73a821cb8433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallSpeed: 300
 --- !u!1 &2060610947
 GameObject:
   m_ObjectHideFlags: 0
