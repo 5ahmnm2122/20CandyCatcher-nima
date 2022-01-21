@@ -32,7 +32,7 @@ public class SpawnItems : MonoBehaviour
 
     }
 
-    private void Update()
+    void Update()
     {
         countdown += Time.deltaTime;
         if (countdown >= 5)
