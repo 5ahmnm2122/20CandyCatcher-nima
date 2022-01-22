@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SpawnItems : MonoBehaviour
 {
-    public GameObject goodItem;
-    public GameObject badItem;
+    public GameObject goodItemPrefab;
+    public GameObject badItemPrefab;
     public float spawnTime;
     private int i;
     public float countdown = 0;
@@ -15,6 +15,8 @@ public class SpawnItems : MonoBehaviour
         i = Random.Range(1, 6);
 
         StartSpawn();
+
+        
     }
 
    
@@ -23,13 +25,14 @@ public class SpawnItems : MonoBehaviour
     {
         if (i > 3)
         {
-            InvokeRepeating("goodItem", 50f, spawnTime);
+            InvokeRepeating("DropGood", 50f, spawnTime);
         }
         else
         {
-            InvokeRepeating("badItem", 50f, spawnTime);
+            InvokeRepeating("DropBad", 50f, spawnTime);
         }
 
+        Debug.Log("Start");
     }
 
     void Update()
@@ -38,29 +41,45 @@ public class SpawnItems : MonoBehaviour
         if (countdown >= 5)
         {
 
-            DropGood();
-            DropBad();
 
+            //DropGood();
+            //DropBad();
+            SpawnArea();
             countdown = 0;
+
+            Debug.Log("Spawn");
         }
 
         
     }
 
+    void SpawnArea()
+    {
+        float x = Random.Range(200, 800);
+        float y = Random.Range(2500, 2500);
+        Vector2 spawnPosition = new Vector2(x, y);
+
+        GameObject badItem = Instantiate(badItemPrefab, spawnPosition, Quaternion.identity, GameObject.FindGameObjectWithTag("bad").transform);
+        
+        GameObject goodItem = Instantiate(goodItemPrefab, spawnPosition, Quaternion.identity, GameObject.FindGameObjectWithTag("good").transform);
+    }
+
     void DropGood()
     {
-        Vector2 positionItem = new Vector2(Random.Range(100,800), Random.Range(640, 640));
-        Instantiate(goodItem, goodItem.transform);
-        
+
+        // Vector2 positionItem = new Vector2(Random.Range(800,800), Random.Range(640, 640));
+        // Instantiate(goodItem, goodItem.transform);
+       // Instantiate(goodItem, spawnPosition, Quaternion.identity);
+
 
     }
 
     void DropBad()
     {
 
-        Vector2 positionItem = new Vector2(Random.Range(100, 800), Random.Range(640, 640));
-        Instantiate(badItem, badItem.transform);
-        //Instantiate(badItem, new Vector2(transform.position.x, 0), Quaternion.identity);
+       // Vector2 positionItem = new Vector2(Random.Range(800, 800), Random.Range(640, 640));
+       // Instantiate(badItem, badItem.transform);
+    
 
     }
 
