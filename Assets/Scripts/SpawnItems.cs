@@ -7,13 +7,12 @@ public class SpawnItems : MonoBehaviour
     public GameObject goodItemPrefab;
     public GameObject goodItem2Prefab;
     public GameObject badItemPrefab;
-    public float spawnTime;
-    private int i;
+    
     public float countdown = 0;
 
     private void Start()
     {
-        i = 1;
+        
 
         StartSpawn();
 
@@ -21,17 +20,17 @@ public class SpawnItems : MonoBehaviour
     }
 
    
-
+   
     void StartSpawn()
     {
-        if (i >= 1)
-        {
-            InvokeRepeating("DropGood", 1f, spawnTime);
-        }
-        else
-        {
-            InvokeRepeating("DropBad", 1f, spawnTime);
-        }
+
+
+        InvokeRepeating("DropGood", 1, 3);
+
+        InvokeRepeating("DropGood2", 1, 3);
+
+        InvokeRepeating("DropBad", 1, 3);
+        
 
         Debug.Log("Start");
     }
@@ -54,7 +53,8 @@ public class SpawnItems : MonoBehaviour
     void SpawnArea()
     {
         float x = Random.Range(200, 800);
-        float y = Random.Range(2500, 2500);
+        float y = Random.Range(2400, 2400);
+
         Vector2 spawnPosition = new Vector2(x, y);
 
         GameObject badItem = Instantiate(badItemPrefab, spawnPosition, Quaternion.identity, GameObject.FindGameObjectWithTag("bad").transform);

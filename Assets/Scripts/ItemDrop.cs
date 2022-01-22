@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemDrop : MonoBehaviour
 {
-    public float fallSpeed = 300;
+    public float fallSpeed = 100;
     
 
     void Update()

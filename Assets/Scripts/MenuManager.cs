@@ -13,13 +13,7 @@ public class MenuManager : MonoBehaviour
 
     public ScriptableObject myObject;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
-
-    
+  
 
     public void LoadScene()
     {

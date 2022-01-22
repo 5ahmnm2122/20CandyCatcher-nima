@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -12,7 +13,8 @@ public class ScoreManager : MonoBehaviour
     public static int score;
 
 
-    public List<GameObject> hearts = new List<GameObject>();
+    public GameObject[] hearts;
+    public int health = 3;
 
     public ScriptableObject myObject;
 
@@ -22,6 +24,8 @@ public class ScoreManager : MonoBehaviour
     {
 
     }
+
+
 
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D otherObject)
@@ -49,21 +53,24 @@ public class ScoreManager : MonoBehaviour
 
         if (otherObject.gameObject.tag == "bad")
         {
-            Debug.Log("lose heart");
-            Destroy(otherObject);
-            hearts.Remove(otherObject.gameObject);
+            
+                Debug.Log("lose heart");
+                LoseHeart();
+        
+           
         }
-
 
 
     }
 
-    public void Scoring()
+    public void LoseHeart()
     {
-        /* float value = score;
-         scoreValue.text = value.ToString();
-         myObject.scoreValue = value;
-     */
+        hearts[health - 1].SetActive(false);
+        health -= 1;
 
+        if (health == 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }

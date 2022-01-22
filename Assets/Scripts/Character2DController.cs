@@ -3,7 +3,7 @@ using UnityEngine;
 public class Character2DController : MonoBehaviour
 {
 
-    public float speed = 1;
+    public float speed = 20;
 
     // Start is called before the first frame update
     void Start()
