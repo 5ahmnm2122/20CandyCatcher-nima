@@ -18,13 +18,6 @@
 ### Visuals:
 
 
-
-<div>
-<img src = "./Screenshots/Screenshot1.PNG">
-<div>
-
-
-
 <div>
 <img src = "./Screenshots/Screenshot2.PNG">
 <div>
