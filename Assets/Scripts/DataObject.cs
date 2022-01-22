@@ -7,5 +7,6 @@ using UnityEngine;
 public class DataObject : ScriptableObject
 {
     public string yourName;
-    public float score;
+    public float scoreValue;
+
 }

@@ -10,11 +10,14 @@ public class UIManager : MonoBehaviour
     public Text timerText;
 
     public Text name;
+    
     public ScriptableObject myObject;
+
 
     private void Start()
     {
         name.text = myObject.name;
+       
     }
 
     private void Update()
@@ -24,11 +27,14 @@ public class UIManager : MonoBehaviour
 
         if (targetTime <= 0.0f)
         {
+            
             LoadWin();
         }
 
         
     }
+
+   
 
     void DisplayTime(float timeToDisplay)
     {
@@ -41,12 +47,14 @@ public class UIManager : MonoBehaviour
         timerText.text = string.Format("{0:00}" + " s ", seconds);
     }
 
+   
     
     public void LoadWin()
     {
         SceneManager.LoadScene("WinningScene");
     }
    
+
 
 
 }

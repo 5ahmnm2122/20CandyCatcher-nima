@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnItems : MonoBehaviour
 {
     public GameObject goodItemPrefab;
+    public GameObject goodItem2Prefab;
     public GameObject badItemPrefab;
     public float spawnTime;
     private int i;
@@ -12,7 +13,7 @@ public class SpawnItems : MonoBehaviour
 
     private void Start()
     {
-        i = Random.Range(1, 6);
+        i = 1;
 
         StartSpawn();
 
@@ -23,13 +24,13 @@ public class SpawnItems : MonoBehaviour
 
     void StartSpawn()
     {
-        if (i > 3)
+        if (i >= 1)
         {
-            InvokeRepeating("DropGood", 50f, spawnTime);
+            InvokeRepeating("DropGood", 1f, spawnTime);
         }
         else
         {
-            InvokeRepeating("DropBad", 50f, spawnTime);
+            InvokeRepeating("DropBad", 1f, spawnTime);
         }
 
         Debug.Log("Start");
@@ -41,9 +42,6 @@ public class SpawnItems : MonoBehaviour
         if (countdown >= 5)
         {
 
-
-            //DropGood();
-            //DropBad();
             SpawnArea();
             countdown = 0;
 
@@ -60,26 +58,10 @@ public class SpawnItems : MonoBehaviour
         Vector2 spawnPosition = new Vector2(x, y);
 
         GameObject badItem = Instantiate(badItemPrefab, spawnPosition, Quaternion.identity, GameObject.FindGameObjectWithTag("bad").transform);
-        
+
         GameObject goodItem = Instantiate(goodItemPrefab, spawnPosition, Quaternion.identity, GameObject.FindGameObjectWithTag("good").transform);
-    }
 
-    void DropGood()
-    {
-
-        // Vector2 positionItem = new Vector2(Random.Range(800,800), Random.Range(640, 640));
-        // Instantiate(goodItem, goodItem.transform);
-       // Instantiate(goodItem, spawnPosition, Quaternion.identity);
-
-
-    }
-
-    void DropBad()
-    {
-
-       // Vector2 positionItem = new Vector2(Random.Range(800, 800), Random.Range(640, 640));
-       // Instantiate(badItem, badItem.transform);
-    
+        GameObject goodItem2 = Instantiate(goodItem2Prefab, spawnPosition, Quaternion.identity, GameObject.FindGameObjectWithTag("good2").transform);
 
     }
 
