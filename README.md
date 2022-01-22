@@ -43,7 +43,7 @@
 
 ### Project state:
 
-* 80 % 
+* 90 % 
 
 ### Limitations: 
 
