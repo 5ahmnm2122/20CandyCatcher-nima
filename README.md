@@ -17,9 +17,13 @@
 
 ### Visuals:
 
+
+
 <div>
 <img src = "./Screenshots/Screenshot1.PNG">
 <div>
+
+
 
 <div>
 <img src = "./Screenshots/Screenshot2.PNG">
@@ -39,7 +43,7 @@
 
 ### Project state:
 
-* 50 %
+* 80 % 
 
 ### Limitations: 
 
@@ -49,8 +53,7 @@
 
 * revision of further c# functions
 * revision of scriptable objects
-* 
+* revision of arrays
 
 	
-
 Copyright by nima
