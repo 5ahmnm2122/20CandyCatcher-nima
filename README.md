@@ -20,7 +20,7 @@
 
 
 <div>
-<img src = "./Screenshots/Screenshot1.PNG">
+<img src = "./Screenshots/Screenshot1.PNG" width=200px>
 <div>
 
 
