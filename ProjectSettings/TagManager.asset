@@ -3,12 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - bad
+  - Canvas
+  - good
+  - good2
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Health
   - Water
   - UI
   - 
