@@ -26,10 +26,7 @@
 ### Necessary setup/execution steps: 
 
 * WebGL-Link: https://5ahmnm2122.github.io/20CandyCatcher-nima/
-<<<<<<< HEAD
-=======
 
->>>>>>> 8c9880af1b271a8737d4dcfa97143484788e41f0
 
 ### Third party material:
 
