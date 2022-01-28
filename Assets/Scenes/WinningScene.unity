@@ -902,7 +902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myObject: {fileID: 11400000, guid: 83d4832bebf45024e851d124f42e09b2, type: 2}
   name: {fileID: 1937737129}
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 321145113}
   scoreValue: {fileID: 321145113}
 --- !u!4 &1744878894
 Transform:

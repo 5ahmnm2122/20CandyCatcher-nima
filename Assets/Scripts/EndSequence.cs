@@ -17,7 +17,8 @@ public class EndSequence : MonoBehaviour
     void Start()
     {
         name.text = myObject.name;
-        scoreText.text = "" + ScoreManager.score.ToString();
+        scoreText.text = "" + PlayerPrefs.GetInt("score");
+        //scoreText.text = "" + ScoreManager.score.ToString();
         // scoreValue.text = myObject.scoreValue.ToString("");
 
     }
@@ -26,7 +27,7 @@ public class EndSequence : MonoBehaviour
     public void Reset()
     {
         myObject.name = "";
-        ScoreManager.score = 0;
+        
         SceneManager.LoadScene("StartScene");
     }
 }

@@ -9,6 +9,7 @@ public class ScoreManager : MonoBehaviour
 
     public GameObject badDrop;
     public GameObject goodDrop;
+    public GameObject goodDrop2;
     public Text scoreText;
     public static int score;
 
@@ -22,7 +23,8 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        PlayerPrefs.SetInt("score", score);
+        
     }
 
 
@@ -35,7 +37,8 @@ public class ScoreManager : MonoBehaviour
             Debug.Log("Item caught");
             score += 1;
             scoreText.text = "" + score.ToString();
-
+            PlayerPrefs.SetInt("score", score);
+            // Destroy(this.gameObject);
 
 
         }
@@ -46,6 +49,7 @@ public class ScoreManager : MonoBehaviour
             Debug.Log("Item caught");
             score += 3;
             scoreText.text = "" + score.ToString();
+            PlayerPrefs.SetInt("score", score);
 
 
 

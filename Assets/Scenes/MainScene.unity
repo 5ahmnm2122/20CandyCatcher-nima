@@ -395,6 +395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   badDrop: {fileID: 1963914749}
   goodDrop: {fileID: 495750802}
+  goodDrop2: {fileID: 1214299050}
   scoreText: {fileID: 912436689}
   hearts:
   - {fileID: 1456462877}

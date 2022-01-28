@@ -7,6 +7,8 @@ public class SpawnItems : MonoBehaviour
     public GameObject goodItemPrefab;
     public GameObject goodItem2Prefab;
     public GameObject badItemPrefab;
+
+    public float spawnTime;
     
     public float countdown = 0;
 
@@ -25,11 +27,11 @@ public class SpawnItems : MonoBehaviour
     {
 
 
-        InvokeRepeating("DropGood", 1, 3);
+        InvokeRepeating("DropGood", 50f, spawnTime);
 
-        InvokeRepeating("DropGood2", 1, 3);
+        InvokeRepeating("DropGood2", 50f, spawnTime);
 
-        InvokeRepeating("DropBad", 1, 3);
+        InvokeRepeating("DropBad", 50f, spawnTime);
         
 
         Debug.Log("Start");
