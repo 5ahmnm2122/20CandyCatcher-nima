@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnItems : MonoBehaviour
@@ -8,13 +6,19 @@ public class SpawnItems : MonoBehaviour
     public GameObject goodItem2Prefab;
     public GameObject badItemPrefab;
 
+    public GameObject[] drops;
+
     public float spawnTime;
     
     public float countdown = 0;
 
+    public int i;
+
+    
+
     private void Start()
     {
-        
+        i = Random.Range(1, 5);
 
         StartSpawn();
 
@@ -25,14 +29,17 @@ public class SpawnItems : MonoBehaviour
    
     void StartSpawn()
     {
+        if (i > 2)
+        {
+            InvokeRepeating("DropGood", 50f, spawnTime);
+
+            InvokeRepeating("DropGood2", 50f, spawnTime);
+
+            InvokeRepeating("DropBad", 50f, spawnTime);
 
 
-        InvokeRepeating("DropGood", 50f, spawnTime);
 
-        InvokeRepeating("DropGood2", 50f, spawnTime);
-
-        InvokeRepeating("DropBad", 50f, spawnTime);
-        
+        } 
 
         Debug.Log("Start");
     }
@@ -40,32 +47,32 @@ public class SpawnItems : MonoBehaviour
     void Update()
     {
         countdown += Time.deltaTime;
-        if (countdown >= 5)
+
+        if (countdown >= 2)
         {
 
             SpawnArea();
+            SpawnRandomItem();
             countdown = 0;
 
             Debug.Log("Spawn");
         }
-
         
     }
 
-    void SpawnArea()
+    Vector2 SpawnArea()
     {
         float x = Random.Range(200, 800);
         float y = Random.Range(2400, 2400);
 
-        Vector2 spawnPosition = new Vector2(x, y);
-
-        GameObject badItem = Instantiate(badItemPrefab, spawnPosition, Quaternion.identity, GameObject.FindGameObjectWithTag("bad").transform);
-
-        GameObject goodItem = Instantiate(goodItemPrefab, spawnPosition, Quaternion.identity, GameObject.FindGameObjectWithTag("good").transform);
-
-        GameObject goodItem2 = Instantiate(goodItem2Prefab, spawnPosition, Quaternion.identity, GameObject.FindGameObjectWithTag("good2").transform);
+       return new Vector2 (x, y);
 
     }
 
-    
+
+    void SpawnRandomItem()
+    {
+        GameObject randomItem = Instantiate(drops[UnityEngine.Random.Range(0,3)], SpawnArea(), Quaternion.identity, GameObject.FindGameObjectWithTag("good").transform);
+
+    }
 }

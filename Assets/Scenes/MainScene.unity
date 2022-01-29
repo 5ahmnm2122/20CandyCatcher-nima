@@ -1542,7 +1542,13 @@ MonoBehaviour:
   goodItemPrefab: {fileID: 495750802}
   goodItem2Prefab: {fileID: 1214299050}
   badItemPrefab: {fileID: 1963914749}
+  drops:
+  - {fileID: 1963914749}
+  - {fileID: 495750802}
+  - {fileID: 1214299050}
+  spawnTime: 0
   countdown: 0
+  i: 0
 --- !u!4 &1432748840
 Transform:
   m_ObjectHideFlags: 0

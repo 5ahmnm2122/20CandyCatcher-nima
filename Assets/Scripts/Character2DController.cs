@@ -3,7 +3,7 @@ using UnityEngine;
 public class Character2DController : MonoBehaviour
 {
 
-    public float speed = 20;
+    public float speed = 40;
 
     // Update is called once per frame
     void Update()

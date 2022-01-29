@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemDrop : MonoBehaviour
 {
-    public float fallSpeed = 100;
+    public float fallSpeed = 150;
     
 
     void Update()
@@ -15,5 +15,13 @@ public class ItemDrop : MonoBehaviour
 
     }
 
-  
+    private void OnCollisionEnter (Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("hit platform");
+            Destroy(gameObject);
+        }
+        
+    }
 }
