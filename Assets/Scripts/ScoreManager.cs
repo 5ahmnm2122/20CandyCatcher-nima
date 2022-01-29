@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -16,10 +17,16 @@ public class ScoreManager : MonoBehaviour
 
     public ScriptableObject myObject;
 
+    public AudioSource backgroundMusic;
+    public AudioSource collectGoodItem;
+    public AudioSource collectBadItem;
+
     // Start is called before the first frame update
     void Start()
     {
         PlayerPrefs.SetInt("score", score);
+       
+        backgroundMusic.Play(); 
         
     }
 
@@ -32,7 +39,9 @@ public class ScoreManager : MonoBehaviour
             score += 1;
             scoreText.text = "" + score.ToString();
             PlayerPrefs.SetInt("score", score);
+
             
+            collectGoodItem.Play(3);
         }
 
 
@@ -43,6 +52,9 @@ public class ScoreManager : MonoBehaviour
             scoreText.text = "" + score.ToString();
             PlayerPrefs.SetInt("score", score);
 
+            
+            collectGoodItem.Play(3);
+
         }
 
         if (otherObject.gameObject.tag == "bad")
@@ -50,7 +62,10 @@ public class ScoreManager : MonoBehaviour
             
                 Debug.Log("lose heart");
                 LoseHeart();
+
            
+            collectBadItem.Play(5);
+
         }
 
 
