@@ -1790,6 +1790,7 @@ GameObject:
   - component: {fileID: 1083866282}
   - component: {fileID: 1083866281}
   - component: {fileID: 1083866280}
+  - component: {fileID: 1083866285}
   m_Layer: 5
   m_Name: Player
   m_TagString: Player
@@ -1868,6 +1869,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083866278}
   m_CullTransparentMesh: 1
+--- !u!61 &1083866285
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083866278}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.010033429, y: 1.4794313}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.49409798, y: 0.0516875}
+    oldSize: {x: 1.7, y: 3.3}
+    newSize: {x: 1.7, y: 3.3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 199.43, y: 329.99}
+  m_EdgeRadius: 0
 --- !u!1 &1214299050 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1378733719129250751, guid: b92e8fd474458314895e03206f3ea69b, type: 3}

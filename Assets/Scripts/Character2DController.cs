@@ -11,5 +11,6 @@ public class Character2DController : MonoBehaviour
         var movement = Input.GetAxis("Horizontal");
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * speed;
         
+       
     }
 }
