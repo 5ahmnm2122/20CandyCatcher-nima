@@ -33,11 +33,12 @@
 * Environment: https://assetstore.unity.com/packages/2d/free-2d-mega-pack-177430
 * 2D Outline: https://assetstore.unity.com/packages/vfx/shaders/2d-sprite-outline-109669
 * Heart Sprite: https://www.nicepng.com/ourpic/u2q8a9t4o0y3u2t4_8bit-heart-png-free-library-heart-8-bits/
+* Sounds: https://freesound.org/
 
 
 ### Project state:
 
-* 90 % 
+* 100 % 
 
 ### Limitations: 
 
@@ -48,6 +49,7 @@
 * revision of further c# functions
 * revision of scriptable objects
 * revision of arrays
+* use of PlayerPrefs
 
 	
 Copyright by nima
